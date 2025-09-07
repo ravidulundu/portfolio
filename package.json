@@ -4,13 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "start": "npx serve -s dist -l ${PORT:-3000}",
+    "preview": "astro preview --port ${PORT:-3000} --host 0.0.0.0",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.9.1"
+    "astro": "^5.9.1",
+    "serve": "^14.2.3"
   },
   "engines": {
     "node": "^20.0.0"
